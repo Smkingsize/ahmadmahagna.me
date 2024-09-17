@@ -1,7 +1,7 @@
 // js/main.js
 import './css/styles.css'
 
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.132.2-dLPTyDAYt6rc6aB18fLm/mode=imports/optimized/three.js';
 
 // scene, camera and renderer
 const scene = new THREE.Scene();
