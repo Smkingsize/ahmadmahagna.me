@@ -36,7 +36,8 @@ window.addEventListener('scroll', () => {
 
     // Update the camera's Y position based on scroll
     // Adjust scaling factor if you want faster/slower movement
-    camera.position.y = -scrollY * 0.01; 
+    camera.position.y = -scrollY * 0.01;
+    camera.position.z = -scrollY * 0.01;
 });
 
 // Basic render loop with rotation
@@ -48,7 +49,8 @@ function animate() {
     cube.rotation.y += 0.01;
 
     // Rotate the ring
-    ring.rotation.z += 0.01;
+    ring.rotaition.x += 0.01;
+    ring.rotation.z += 0.05;
 
     renderer.render(scene, camera);
 }
