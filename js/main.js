@@ -13,12 +13,21 @@ renderer.setClearColor(0x000000); // Black background
 document.body.appendChild(renderer.domElement);
 
 // Create a cube geometry and a basic material
-const geometry = new THREE.BoxGeometry(); // Creates a box shape
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Green color
-const cube = new THREE.Mesh(geometry, material); // Create a mesh with geometry and material
+const cubeGeometry = new THREE.BoxGeometry(); // Creates a box shape
+const cubeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Green color
+const cube = new THREE.Mesh(cubeGeometry, cubeMaterial); // Create a mesh with geometry and material
 
 // Add the cube to the scene
 scene.add(cube);
+
+// Create a ring geometry
+const ringGeometry = new THREE.RingGeometry(1, 1.5, 32); // Creates a ring with inner and outer radii
+const ringMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000, side: THREE.DoubleSide }); // Red color, double-sided
+const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+
+// Position the ring somewhere else in the scene
+ring.position.set(2, 1, -3);
+scene.add(ring);
 
 // Scroll interaction: adjust camera's Y position based on scroll
 window.addEventListener('scroll', () => {
@@ -27,7 +36,7 @@ window.addEventListener('scroll', () => {
 
     // Update the camera's Y position based on scroll
     // Adjust scaling factor if you want faster/slower movement
-    camera.position.y = -scrollY * 0.02; 
+    camera.position.y = -scrollY * 0.01; 
 });
 
 // Basic render loop with rotation
@@ -37,6 +46,9 @@ function animate() {
     // Rotate the cube
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
+
+    // Rotate the ring
+    ring.rotation.z += 0.01;
 
     renderer.render(scene, camera);
 }
