@@ -49,7 +49,7 @@ function animate() {
     cube.rotation.y += 0.01;
 
     // Rotate the ring
-    ring.rotaition.x += 0.01;
+    ring.rotation.x += 0.01;
     ring.rotation.z += 0.05;
 
     renderer.render(scene, camera);
