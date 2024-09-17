@@ -37,7 +37,7 @@ window.addEventListener('scroll', () => {
     // Update the camera's Y position based on scroll
     // Adjust scaling factor if you want faster/slower movement
     camera.position.y = -scrollY * 0.01;
-    camera.position.z = -scrollY * 0.01;
+    camera.position.z = -scrollY * 0.1;
 });
 
 // Basic render loop with rotation
