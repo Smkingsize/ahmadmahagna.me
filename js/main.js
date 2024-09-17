@@ -8,6 +8,7 @@ camera.position.z = 5;
 // Create the renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio); // Adjust for high-DPI displays
 renderer.setClearColor(0x000000); // Black background
 document.body.appendChild(renderer.domElement);
 
@@ -33,7 +34,9 @@ animate();
 
 // Handle window resize
 window.addEventListener('resize', () => {
+    // Update renderer size and camera aspect ratio
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio); // Adjust for high-DPI displays
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 });
