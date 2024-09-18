@@ -1,10 +1,6 @@
-resolve: {
-    alias: {
-        'three': path.resolve(__dirname, 'node_modules/three')
-    }
-}
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.144.0/build/three.module.js';
 
-import * as THREE from 'three'
+//import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
