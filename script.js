@@ -1,3 +1,9 @@
+resolve: {
+    alias: {
+        'three': path.resolve(__dirname, 'node_modules/three')
+    }
+}
+
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
