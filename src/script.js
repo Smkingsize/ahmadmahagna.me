@@ -1,8 +1,8 @@
 import * as THREE from '/node_modules/three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
-import GUI from 'lil-gui'
+import { OrbitControls } from '/node_modules/three/examples/jsm/controls/OrbitControls.js'
+import { FontLoader } from '/node_modules/three/examples/jsm/loaders/FontLoader.js'
+import { TextGeometry } from '/node_modules/three/examples/jsm/geometries/TextGeometry.js'
+import GUI from '/node_modules/lil-gui'
 
 /**
  * Base
