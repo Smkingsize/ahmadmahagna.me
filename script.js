@@ -2,7 +2,7 @@ import * as THREE from './node_modules/three/build/three.cjs'
 import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js'
 import { FontLoader } from './node_modules/three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from './node_modules/three/examples/jsm/geometries/TextGeometry.js'
-import GUI from 'lil-gui'
+import GUI from './node_modules/lil-gui'
 
 /**
  * Base
