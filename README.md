@@ -1,8 +1,16 @@
-# ahmadmahagna.me
-This is an Auto-Deploy repository for my own website
+# Three.js Journey
 
-I have already setup auto-deploy to hostinger.
+## Setup
+Download [Node.js](https://nodejs.org/en/download/).
+Run this followed commands:
 
-Website: https://blue-goat-890945.hostingersite.com
+``` bash
+# Install dependencies (only the first time)
+npm install
 
-I started creating a sexy website for my portfolio using ThreeJS
+# Run the local server at localhost:8080
+npm run dev
+
+# Build for production in the dist/ directory
+npm run build
+```
